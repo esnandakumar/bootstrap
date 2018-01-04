@@ -23,4 +23,11 @@
 	color: floralwhite;
 }
 
-	
+body {
+	margin-top: 50px;
+	z-index: 0;	
+}
+
+.navbar-inverse {
+	background-color: #512da8;
+}

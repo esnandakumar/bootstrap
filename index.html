@@ -72,6 +72,65 @@
         </div>
     </div>
 
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button> 
+                </div>
+
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="form-group row mb-4">
+                                <label for="partynumber" class="col-2 mr-4">Number of Guests</label>
+                                <label class="col-1"><input type="radio" name="optradio">&nbsp;1</label>
+                                <label class="col-1"><input type="radio" name="optradio">&nbsp;2</label>
+                                <label class="col-1"><input type="radio" name="optradio">&nbsp;3</label>
+                                <label class="col-1"><input type="radio" name="optradio">&nbsp;4</label>
+                                <label class="col-1"><input type="radio" name="optradio">&nbsp;5</label>
+                                <label class="col-1"><input type="radio" name="optradio">&nbsp;6</label>
+                        </div>
+                        <div class="form-group row mb-4">
+                            <label for="section" class="col-3">Section</label>
+                            <div class="btn-group col-4 ml-4" data-toggle="buttons">
+                                <label class="btn btn-primary btn-sm btn-success active">
+                                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                </label>
+                                <label class="btn btn-primary btn-sm btn-danger">
+                                  <input type="radio" name="options" id="option2" autocomplete="off">Smoking
+                                </label>
+                              </div>
+                        </div>
+
+                        <div class="form-group row mb-4">
+                            <label for="datetime" class="col-2">Date and Time</label>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                                        <input type="text" class="form-control" id="date"       name="date" placeholder="Date">
+                                    </div>    
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="fa fa-clock-o"></span></div>
+                                        <input type="text" class="form-control" id="time"       name="time" placeholder="Time">
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary btn-default " data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary ">Reserve</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -83,8 +142,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-3 align-self-center">
-                    <a role="button" class="btn btn-block btn-sm btn-warning nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Or call us at <br> <strong> +358 50 486 0512<stong>"
-                            data-placement="bottom" href="#reservetable">Reserve Table</a>
+                    <a role="button" data-toggle="modal" data-target="#reserveModal" class="btn btn-block btn-sm btn-warning" href="#reservetable">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -181,45 +239,7 @@
                 </div>
             </div>
         </div>
-        <div class="row row-content align-items-center">
-            <div class="col-xs-12 col-sm-8 offset-2">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white" id="reservetable">Reserve a Table</h3>
-                    <div class="card-block">
-                       <div class="form-group row">
-                           <label for="partynumber" class="col-3 col-form-label">Number of Guests</label>
-                           <label class="col-1"><input type="radio" name="optradio">1</label>
-                           <label class="col-1"><input type="radio" name="optradio">2</label>
-                           <label class="col-1"><input type="radio" name="optradio">3</label>
-                           <label class="col-1"><input type="radio" name="optradio">4</label>
-                           <label class="col-1"><input type="radio" name="optradio">5</label>
-                           <label class="col-1"><input type="radio" name="optradio">6</label>
-                       </div>
-                        <div class="form-group row">
-                            <label for="datetime" class="col-md-2 col-form-label">Date and Time</label>
-                            <div class="col-sm-4">
-                                <div class="input-group">
-                                    <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
-                                        <input type="text" class="form-control" id="date"       name="date" placeholder="Date">
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="input-group">
-                                    <div class="input-group-addon"><span class="fa fa-clock-o"></span></div>
-                                        <input type="text" class="form-control" id="time"       name="time" placeholder="Time">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="offset-2 col-sm-2">
-                                <button type="submit" class="btn btn-primary">Reserve</button>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <footer class="footer">
@@ -268,11 +288,6 @@
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
 
 </html>

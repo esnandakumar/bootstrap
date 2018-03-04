@@ -22,4 +22,12 @@ $(document).ready(function() {
         $("#mycarousel").carousel('cycle');
     });
 
+    $("#login").click(function() { 
+        $("#loginModal").modal();
+    });
+
+    $("#reserve").click(function() {
+        $("#reserveModal").modal();
+    });
+
 });
